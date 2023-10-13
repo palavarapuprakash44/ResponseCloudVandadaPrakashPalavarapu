@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesTask2.css">
+    <script src="formDataTask2.js"></script>
+    <title>Document</title>
+</head>
+
+<h1 id="Header">Survey From</h1>
+
+<body>
+    <!--
+ Some of the Key Properties of this Form
+ 1)Validated every field
+ 2)shows the stringified JSON Form data in alert msg after submitting the form
+ 3)Validation - atleast one character and only alphabets allowed for fields like
+   - FirstName
+   - LastName
+   - Profession
+ 4)validation for email - aplhaNumerics and special characters like (".","_","%","+","-") followed by
+   "@" symbol and aplhaNumerics along with (".","-") followed by "." and two or more alphabets.
+   Regex : "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+ 5)Validation for mobile number: only numberss allowed, no more or less that 10 digits allowed.
+-->
+    <form onsubmit="return false">
+        <div id="FnameDiv">
+            <label for="FirstName">FirstName : </label>
+            <input id="FirstName" type="Text">
+        </div>
+
+        <div id="LnameDiv">
+            <label for="LastName">LastName : </label>
+            <input id="LastName" type="Text">
+        </div>
+
+        <div id="DOB_Div">
+            <label for="DOB">Date of Birth : </label>
+            <input id="DOB" type="date">
+        </div>
+
+        <div id="countryDiv">
+            <label for="Country" id="Countrylab">Country : </label>
+            <select id="country" name="country" class="form-control">
+                <!-- The country Names are taken from web-->
+                <option value=0>Select Country</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Australia">Australia</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Canada">Canada</option>
+                <option value="China">China</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Egypt">Egypt</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="Hong Kong">Hong Kong</option>
+                <option value="Hungary">Hungary</option>
+                <option value="India">India</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Iraq">Iraq</option>
+                <option value="Ireland">Ireland</option>
+                <option value="Japan">Japan</option>
+                <option value="Korea">Korea</option>
+                <option value="Latvia">Latvia</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Nepal">Nepal</option>
+                <option value="Oman">Oman</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Russian">Russian</option>
+                <option value="Spain">Spain</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Turkey">Turkey</option>
+                <option value="Ukraine">Ukraine</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="United States">United States</option>
+                <option value="Yemen">Yemen</option>
+                <option value="Zimbabwe">Zimbabwe</option>
+            </select>
+        </div>
+
+        <div id="GenderDiv">
+            <label>Gender : </label>
+
+            <input name="Gender" id="Male" type="radio">
+            <label for="Male">Male</label>
+
+            <input name="Gender" id="Female" type="radio">
+            <label for="Female">Female</label>
+
+        </div>
+
+        <div id="ProfDiv">
+            <label for="Profession">Profession : </label>
+            <input id="Profession" type="text">
+        </div>
+
+        <div id="emailDiv">
+            <label for="email">Email : </label>
+            <input id="email" type="text">
+        </div>
+
+        <div id="PhnDiv">
+            <label for="Phn">Moblie Nnumber : </label>
+            <input id="Phn" type="text">
+        </div>
+
+        <div id="button">
+            <button id="Submit" type="submit" onclick="SubmitForm()">Submit</button>
+            <button id="Reset" onclick="ResetForm()">Reset</button>
+        </div>
+    </form>
+
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="stylesTask1.css">
+    <script src="ScriptTask1.js"></script>
+</head>
+
+<div class="Header">
+    <h1>Basic Calculator</h1>
+</div>
+
+<body>
+    <!--
+The basic Calculator has some special properties:
+
+1)To Evaluate expression, click "=", Shows error if no input is given.
+
+2)Shows Error if "+,*,/,=""  were used without any numeric input, 
+  Example Input: "+" (clicks "+" before clicking any number)
+  Error:"Cannot perform operation '+' with no operands".
+
+3)Shows Error if two operators typed immediatly one after other,without numerics in between
+  Example:- "3+*" (is not a valid input) 
+  Error : "Two operators are immediate, '+' and '*' ".
+  
+4)Alphabets and other Special Characters 
+like "@,#,$,%,!....." cannot be inputted.
+
+    -->
+    <table name="MainTable" class="mainTable" width=500px>
+        <tr>
+            <td colspan="4" class="InputTD">
+                <input type="text" id="Screen" disabled=true>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><button class="secondRow" id="AC" onclick="AllClear()">AC</button></td>
+            <td colspan="2"><button class="secondRow" id="BackSpace" onclick="BackSpace()">BackSpace</button></td>
+        </tr>
+        <tr>
+            <td><button id="7" onclick="Write(id)">7</button></td>
+            <td><button id="8" onclick="Write(id)">8</button></td>
+            <td><button id="9" onclick="Write(id)">9</button></td>
+            <td><button class="special" id="+" onclick="Write(id)">+</button></td>
+        </tr>
+        <tr>
+            <td><button id="4" onclick="Write(id)">4</button></td>
+            <td><button id="5" onclick="Write(id)">5</button></td>
+            <td><button id="6" onclick="Write(id)">6</button></td>
+            <td><button class="special" id="-" onclick="Write(id)">-</button></td>
+        </tr>
+        <tr>
+            <td><button id="1" onclick="Write(id)">1</button></td>
+            <td><button id="2" onclick="Write(id)">2</button></td>
+            <td><button id="3" onclick="Write(id)">3</button></td>
+            <td><button class="special" id="/" onclick="Write(id)">/</button></td>
+        </tr>
+        <tr>
+            <td><button class="special" id="." onclick="Write(id)">.</button></td>
+            <td><button id="0" onclick="Write(id)">0</button></td>
+            <td><button class="special" id="=" onclick="Evaluate()">=</button></td>
+            <td><button class="special" id="*" onclick="Write(id)">*</button></td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
